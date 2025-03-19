@@ -1,0 +1,4 @@
+(()=>{
+
+    const stylesheets = document.adoptedStyleSheets = [];
+})
