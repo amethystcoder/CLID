@@ -1,254 +1,54 @@
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Welcome to CLID</title>
 
-    <title>Community Leadership and Inclusion Develoment</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," /> <!-- work on this later-->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] px-10 py-3">
-          <div class="flex items-center gap-1 text-[#111618]">
-            <div>
-                <svg width="30" height="30" viewBox="0 0 74 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 29.5C2.51472 29.5 0.5 31.5147 0.5 34C0.5 36.4853 2.51472 38.5 5 38.5L5 29.5ZM58.182 37.182C59.9393 35.4246 59.9393 32.5754 58.182 30.818L29.5442 2.18019C27.7868 0.422836 24.9376 0.422836 23.1802 2.18019C21.4228 3.93755 21.4228 6.7868 23.1802 8.54416L48.636 34L23.1802 59.4558C21.4228 61.2132 21.4228 64.0624 23.1802 65.8198C24.9376 67.5772 27.7868 67.5772 29.5442 65.8198L58.182 37.182ZM5 34L5 38.5L30 38.5V34V29.5L5 29.5L5 34ZM30 34V38.5L55 38.5V34V29.5L30 29.5V34Z" fill="black"/>
-                    <path d="M69 38.5C71.4853 38.5 73.5 36.4853 73.5 34C73.5 31.5147 71.4853 29.5 69 29.5V38.5ZM15.818 30.818C14.0607 32.5754 14.0607 35.4246 15.818 37.182L44.4558 65.8198C46.2132 67.5772 49.0624 67.5772 50.8198 65.8198C52.5772 64.0624 52.5772 61.2132 50.8198 59.4558L25.364 34L50.8198 8.54416C52.5772 6.7868 52.5772 3.93755 50.8198 2.18019C49.0624 0.422836 46.2132 0.422836 44.4558 2.18019L15.818 30.818ZM69 34V29.5L19 29.5V34V38.5L69 38.5V34Z" fill="black"/>
-                </svg>                    
-            </div>
-            <h2 class="text-[#111618] text-lg font-bold leading-tight tracking-[-0.015em]">CLID</h2>
-          </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111618] text-sm font-medium leading-normal" href="#">About</a>
-              <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Programs</a>
-              <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Impact</a>
-              <a class="text-[#111618] text-sm font-medium leading-normal" href="#">News</a>
-              <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Contact</a>
-            </div>
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#17a1cf] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Donate</span>
-            </button>
-          </div>
-        </header>
-        <div class="px-5 flex flex-1 justify-center py-2">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.801) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1EPrlpYcmxC-KIISHlMQBA6_u6uq6rIu6QM7eM_grMtISal-z2DL2uRjarl2PgoRHr_QXfNsrRJx1_h-sAm2vo0eeBnLcnMbhrMEhJmdUMZ_cgcx-y-yhmH9yqi7BUGi9YGvljsiOueZ2-MfSFRVQpA-5fJg8NHG_WNtyV-F6th5HOiyiYpCDpUW1ZRzXz1ofs8E19FkqF91NwR8sZo_r2UV2F-P5gBcWOr9nGg9tM26vBLMIngZSqdbLWSxmfdX37t9kENl0rCo");'
-                >
-                  <div class="flex flex-col gap-2 text-left">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Empowering Leaders, Transforming Communities
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      We cultivate leadership skills and foster collaboration to address critical community challenges and drive positive change.
-                    </h2>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#17a1cf] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate">Learn More</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Vision &amp; Mission</h2>
-            <p class="text-[#111618] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Our vision is to create a network of informed, engaged, and effective leaders who are committed to building a thriving and equitable society. Our mission is to
-              provide transformative leadership development programs that equip individuals with the knowledge, skills, and networks to lead with purpose and impact.
-            </p>
-            <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Programs Overview</h2>
-            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              <div class="flex items-stretch p-4 gap-3">
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnhTGMimhFzwPCKD2k8dqUIZnMEUMjcML5oz2vRn2csQWWDd5T1CTYBDjJiwM_Bm1rfZBxM3wjyCdoDxVsfS2v6Ep38wrBm7JKr8VwOce1-c3oJ9ZG0yxDzUBuB73EEWy9Re-v4whUdu14SRFfRarERQh8G8FQYWbI8T57N-qeqNleKKbuNdPIf_yGAk_VUGH_1I3KoUSlX5I7SNKkB4hUH9x6vuvs7ngWXUs2Vvu4gvVnXDZPO9ZidcikimCOvxomITXQwJ5NkTw");'
-                  ></div>
-                  <div>
-                    <p class="text-[#111618] text-base font-medium leading-normal">Leadership Development Institute</p>
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">
-                      An intensive program designed to enhance leadership capabilities and foster collaborative problem-solving.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDp2R0au_9KLJ8W0QNyI54g5D0t8yocJxXJmYtHMvzJzYptXUdSREE3CJcGA9-3yf1wHxNkdg4ODFQhPcupqjKqRdhPf3NbKYuC4h3SQuEuIbRyDfLgGr3fmrap-ov1S3jdoa1Y7tQ73l93Es5X09glDTBX_5D9IpxQ1-uSO2fjLVvMaH6k8dckUsEHjNeiTlsAY5p-JbkAWxpbxNnO87ZgLL99oxSFUush_z2xYCtsa1O0ATg57kN5sPeCfG3hiSR_jOUmsty0ONU");'
-                  ></div>
-                  <div>
-                    <p class="text-[#111618] text-base font-medium leading-normal">Community Action Workshops</p>
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">
-                      Hands-on workshops focused on addressing specific community challenges and developing practical solutions.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-                  <div
-                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYcN1foAjlJQglecQgQodVNhK88L4wtOWj0X9MbHpiSlzaJJwTX9ZuCss4XxqiQTxtWjsUyV9PdxPFKFT6okrPWGRC7KXN0ltfsSOKCk4c6FZfpIklvLzEgsmwNdPQ89ghQAo03YoSkNWAF24hNv8lYHsXSeWqYF-BL03fRfN9cXfgj8xrzlmq5NHnr5nGc2aewNNHsbJWErwYT3nNz8yMIPt13PX-B838csLVhvwKiikQekzye28YqJsog-VAtNOMrZBPuXRzdkk");'
-                  ></div>
-                  <div>
-                    <p class="text-[#111618] text-base font-medium leading-normal">Civic Engagement Initiatives</p>
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">Initiatives aimed at increasing civic participation and promoting informed decision-making.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Our Impact &amp; Statistics</h2>
-            <div class="flex flex-wrap gap-4 p-4">
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#f0f3f4]">
-                <p class="text-[#111618] text-base font-medium leading-normal">Leaders Trained</p>
-                <p class="text-[#111618] tracking-light text-2xl font-bold leading-tight">500+</p>
-              </div>
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#f0f3f4]">
-                <p class="text-[#111618] text-base font-medium leading-normal">Community Projects Launched</p>
-                <p class="text-[#111618] tracking-light text-2xl font-bold leading-tight">100+</p>
-              </div>
-              <div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-lg p-6 bg-[#f0f3f4]">
-                <p class="text-[#111618] text-base font-medium leading-normal">Volunteer Hours Contributed</p>
-                <p class="text-[#111618] tracking-light text-2xl font-bold leading-tight">2,000+</p>
-              </div>
-            </div>
-            <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured Stories &amp; Testimonials</h2>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">Success Story</p>
-                    <p class="text-[#111618] text-base font-bold leading-tight">Local Leader Spearheads Community Garden Project</p>
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">
-                      Sarah, a graduate of our Leadership Development Institute, successfully led the creation of a community garden that provides fresh produce and educational
-                      opportunities for residents.
-                    </p>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f3f4] text-[#111618] text-sm font-medium leading-normal w-fit"
-                  >
-                    <span class="truncate">Read More</span>
-                  </button>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC21q1mbCEttcz424fK8SbSvQrQyhWAT2Z6Cda8YrczFJ8NSnmnzFHLNr9qBAEltCIg2IdZHxv7zPnsDEO5vbGcWQYZqMyZQnObDaoVR8ZadGDMOpGTQXDC4Xqm4GUu8aURuI1Bv26NKa6hpsiFqXEhOYMfIaU8jRGfZEhMcFbu-IqLc3sVMMQiBLCQjqzGZ4A8sBerD06cXIyNvH8YxN_45euxarImsuXg6BDiivH0m3UphNW_Z4xmDFG21VXr8z-ckixQ3s6y_Qk");'
-                ></div>
-              </div>
-            </div>
-            <div class="container bg-[#17012D] relative">
-              <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex flex-col gap-2 text-center">
-                  <h1
-                    class="text-[white] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                  >
-                    Join Our Community of Leaders
-                  </h1>
-                  <p class="text-[white] text-base font-normal leading-normal max-w-[720px">
-                    Become a part of a network of passionate individuals committed to creating positive change.
-                  </p>
-                </div>
-                <div class="flex flex-1 justify-center">
-                  <div class="flex justify-center">
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#17a1cf] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                    >
-                      <span class="truncate">Apply Now</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">News &amp; Updates</h2>
-            <div class="p-4">
-              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
-                <div class="flex flex-[2_2_0px] flex-col gap-4">
-                  <div class="flex flex-col gap-1">
-                    <p class="text-[#111618] text-base font-bold leading-tight">Upcoming Leadership Summit</p>
-                    <p class="text-[#637f88] text-sm font-normal leading-normal">
-                      Join us for our annual Leadership Summit, featuring inspiring speakers, interactive workshops, and networking opportunities.
-                    </p>
-                  </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f0f3f4] text-[#111618] text-sm font-medium leading-normal w-fit"
-                  >
-                    <span class="truncate">Register Now</span>
-                  </button>
-                </div>
-                <div
-                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuChtVIyeKS141M0qnzlrCTWC4_qe-lI4LMKMKwnz0Yxlicvzik5GvVPLIA2_kjGkC3uQq25HRxPbOFnTfiW8hFx5FT9LiQKWuc4prCJTjWSAWJN1bqTEZyqWI8HWflSIWZ6ysS2hUK18jR7lOUl7stmDWhX7wICdrnqzClnDMGT8V_REftM-t1Dbij4GvhSaGvDr9s7kZf_OK-R9aXqu2S9UfMwKHRs219x0gA9Z9wuePQP9Rl0jX-DtQuYj7W5qW1WjvoTHs1nd9E");'
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="flex justify-center bg-[#17012D]">
-          <div class="flex max-w-[960px] flex-1 flex-col">
-            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">About</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">Programs</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">Impact</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">News</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">Contact</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                <a class="text-[#637f88] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-              </div>
-              <div class="flex flex-wrap justify-center gap-4">
-                <a href="#">
-                  <div class="text-[#637f88]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="text-[#637f88]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </a>
-                <a href="#">
-                  <div class="text-[#637f88]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-                      ></path>
-                    </svg>
-                  </div>
-                </a>
-              </div>
-              <div class="flex gap-2 text-center align-center">
-                <svg width="74" height="68" viewBox="0 0 74 68" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 29.5C2.51472 29.5 0.5 31.5147 0.5 34C0.5 36.4853 2.51472 38.5 5 38.5L5 29.5ZM58.182 37.182C59.9393 35.4246 59.9393 32.5754 58.182 30.818L29.5442 2.18019C27.7868 0.422836 24.9376 0.422836 23.1802 2.18019C21.4228 3.93755 21.4228 6.7868 23.1802 8.54416L48.636 34L23.1802 59.4558C21.4228 61.2132 21.4228 64.0624 23.1802 65.8198C24.9376 67.5772 27.7868 67.5772 29.5442 65.8198L58.182 37.182ZM5 34L5 38.5L30 38.5V34V29.5L5 29.5L5 34ZM30 34V38.5L55 38.5V34V29.5L30 29.5V34Z" fill="white"/>
-                    <path d="M69 38.5C71.4853 38.5 73.5 36.4853 73.5 34C73.5 31.5147 71.4853 29.5 69 29.5V38.5ZM15.818 30.818C14.0607 32.5754 14.0607 35.4246 15.818 37.182L44.4558 65.8198C46.2132 67.5772 49.0624 67.5772 50.8198 65.8198C52.5772 64.0624 52.5772 61.2132 50.8198 59.4558L25.364 34L50.8198 8.54416C52.5772 6.7868 52.5772 3.93755 50.8198 2.18019C49.0624 0.422836 46.2132 0.422836 44.4558 2.18019L15.818 30.818ZM69 34V29.5L19 29.5V34V38.5L69 38.5V34Z" fill="white"/>
-                </svg>
-                <h1 class="text-[white] text-base font-bold leading-normal ">CLID</h1>
-              </div>
-              <p class="text-[#637f88] text-base font-normal leading-normal">@2023 Community Leaders. All rights reserved.</p>
-            </footer>
-          </div>
-        </footer>
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+  <div class="some-space"></div>
+  <div class="test-element">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iste fugit excepturi adipisci, quos repellat eius quisquam, id nam nihil sint doloremque nulla repellendus quas reiciendis suscipit necessitatibus provident vero!
+  </div>
+  <div class="some-space"></div>
+</body>
+
+<script>
+    let timeline = gsap.timeline({
+      scrollTrigger:{
+        trigger: '.test-element',
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+        markers: true
+      }
+    })
+
+    timeline.to('.test-element', {
+      x: 800
+    })
+
+    //for lenis smooth scroll
+    const lenis = new Lenis();
+
+    lenis.on('scroll',(ev)=>{
+      console.log(ev)
+    })
+
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+
+  </script>
 </html>
