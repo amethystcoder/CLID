@@ -1,3 +1,36 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.core-background, .top-sub-section{
+    width: 95%;
+    display: flex;
+    height: 40vh;
+    margin: 20px;
+    background-color: blueviolet;
+    border-radius: 20px;
+}
+
+.core-background {
+    background-color: transparent;
+    height: 100vh;
+    background-image: url(./assets/conference_2_no_bg_second.png);
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.starter-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .test-element{
     display: flex;
     padding: 10px;
@@ -6,7 +39,6 @@
     border: hidden;
     border-radius: 10px;
     width: 500px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .some-space {
     display: flex;
