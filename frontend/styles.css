@@ -7,28 +7,49 @@ body{
     padding: 0;
 }
 
-.core-background, .top-sub-section{
+.core-background, .top-sub-section, .overhead-background{
     width: 95%;
     display: flex;
     height: 40vh;
     margin: 20px;
-    background-color: blueviolet;
     border-radius: 20px;
 }
 
 .core-background {
-    background-color: transparent;
-    height: 100vh;
-    background-image: url(./assets/conference_2_no_bg_second.png);
+    height: 50vh;
+    background-image: url(./assets/conference\ 2.jpg);
     background-position-y: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .starter-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.overhead-background{
+    z-index: 1;
+    height: 95vh;
+    background-image: url(./assets/conference_2_no_bg.png);
+    background-position-y: bottom;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 95%;
+    position: absolute;
+    background-color: transparent;
+}
+.starter-section>.more-info{
+    background-color: rgba(8, 30, 56, 0.733);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 90vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 2;
 }
 
 .test-element{
