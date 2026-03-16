@@ -1,0 +1,75 @@
+
+*{
+    font-family: "Iosevka Charon Mono", monospace;
+    font-style: normal;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+.primary{
+    color: #E0E0E0;
+}
+.secondary{
+    color: #B0B0B0;
+}
+
+nav{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+}
+nav,#contains-nav-bar,#contains-logo,#contains-links,.links-list{
+    display: flex;
+}
+#contains-nav-bar{
+    justify-content: space-between;
+    width: 70%;
+}
+nav,#contains-logo,#contains-links{
+    align-items: center;
+}
+.link-item{
+    padding: 10px;
+    list-style-type: none;
+}
+.nav-link-text{
+    text-decoration: none;
+}
+
+
+#scroll-hint-cont{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    padding: 15px;
+}
+#scroll-hint{
+    background-color: white;
+    border-radius: 20px;
+    border: hidden;
+    padding: 10px;
+}
+#scroll-hint>h3{
+    margin:0;
+}
+
+#scroll-hint:hover{
+    background-color: transparent;
+    border: solid white thin;
+    padding: 13px;
+}#scroll-hint:hover>h3{
+    color: white;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
