@@ -72,4 +72,18 @@ header{
     align-items: center;
     justify-content: center;
     width: 100%;
+    position: relative;
+}
+.push-down-slight{
+    padding-top: 10%;
+}
+.whitish-box{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 100px;
+    box-sizing: content-box;
 }
