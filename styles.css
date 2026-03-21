@@ -1,91 +1,382 @@
-
-*{
+/* =========================
+   GLOBAL RESET / BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Iosevka Charon Mono", monospace;
     font-style: normal;
 }
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: auto;
 }
-.primary{
+
+body {
+    background-color: #121212;
     color: #E0E0E0;
 }
-.secondary{
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.primary {
+    color: #E0E0E0;
+}
+
+.secondary {
     color: #B0B0B0;
 }
 
-nav{
-    position: fixed;
-    justify-content: center;
-    width: 100%;
+.chapter-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8e8e8e;
+    margin-bottom: 1.25rem;
 }
-nav,#contains-nav-bar,#contains-logo,#contains-links,.links-list{
+
+.story-copy {
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    line-height: 1.8;
+    max-width: 760px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1.25rem 0;
+    pointer-events: none;
+}
+
+#contains-nav-bar,
+#contains-logo,
+#contains-links,
+.links-list {
     display: flex;
 }
-#contains-nav-bar{
+
+#contains-nav-bar {
+    width: min(90%, 1400px);
     justify-content: space-between;
-    width: 70%;
+    align-items: center;
+    pointer-events: auto;
 }
-nav,#contains-logo,#contains-links{
+
+#contains-logo {
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#contains-logo h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+#contains-links {
     align-items: center;
 }
-.link-item{
-    padding: 10px;
+
+.links-list {
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link-item {
+    padding: 0;
     list-style-type: none;
 }
-.nav-link-text{
+
+.nav-link-text {
     text-decoration: none;
+    color: #B0B0B0;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+    transition: opacity 0.2s ease;
 }
 
+.nav-link-text:hover {
+    opacity: 0.7;
+}
 
-#scroll-hint-cont{
+/* =========================
+   SCROLL HINT
+========================= */
+#scroll-hint-cont {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
-    padding: 15px;
-}
-#scroll-hint{
-    background-color: white;
-    border-radius: 20px;
-    border: hidden;
-    padding: 10px;
-}
-#scroll-hint>h3{
-    margin:0;
+    position: absolute; /* changed from fixed */
+    bottom: 2rem;
+    left: 0;
+    z-index: 5;
+    padding: 0;
+    pointer-events: none;
 }
 
-#scroll-hint:hover{
+#scroll-hint {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+    border: none;
+    padding: 0.8rem 1.25rem;
+    transition: all 0.25s ease;
+    pointer-events: auto;
+}
+
+#scroll-hint > h3 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #121212;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#scroll-hint:hover {
     background-color: transparent;
-    border: solid white thin;
-    padding: 13px;
-}#scroll-hint:hover>h3{
-    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-header{
+#scroll-hint:hover > h3 {
+    color: #E0E0E0;
+}
+
+/* =========================
+   HERO / STORY INTRO
+========================= */
+header {
+    position: relative;
+    min-height: 220vh; /* scroll distance for story animation */
+    width: 100%;
+}
+
+/* sticky stage inside header */
+.story-stage {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+}
+
+/* text block over hero */
+.story-text {
     position: relative;
+    z-index: 3;
+    width: min(90%, 1000px);
+    text-align: center;
+    padding: 0 1rem;
+    will-change: transform, opacity;
 }
-.push-down-slight{
-    padding-top: 10%;
+
+.story-text h1 {
+    font-size: clamp(2.8rem, 7vw, 7rem);
+    line-height: 1.02;
+    margin-bottom: 1.5rem;
 }
-.whitish-box{
+
+.story-text .story-copy {
+    margin: 0 auto;
+}
+
+/* optional helper if you still want slight spacing */
+.push-down-slight {
+    padding-top: 0;
+}
+
+/* =========================
+   HERO IMAGE BOX
+========================= */
+.whitish-box {
+    position: absolute;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
-    width: 60%;
-    height: 60%;
-    background-color: white;
+    justify-content: flex-end;
+
+    width: 28vw;
+    height: 18vw;
+
+    min-width: 280px;
+    min-height: 180px;
+
+    max-width: 520px;
+    max-height: 340px;
+
     border-radius: 30px;
-    padding: 100px;
-    box-sizing: content-box;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background-color: transparent;
     background-image: url(./assets/dianacibotari1991-woman-6133583_1920.jpg);
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    will-change: width, height, border-radius, transform;
+}
+
+/* dark overlay on image for readability */
+.whitish-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+    z-index: 1;
+}
+
+/* if you place content inside the box later */
+.whitish-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================
+   STORY PANELS / NEXT SECTIONS
+========================= */
+.story-panel {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10rem 6vw;
+    z-index: 10;
+    background: #121212;
+}
+
+.story-panel__inner {
+    width: min(100%, 900px);
+}
+
+.story-panel h2 {
+    font-size: clamp(2.2rem, 5vw, 5rem);
+    line-height: 1.08;
+    margin-bottom: 1.5rem;
+}
+
+.story-panel--overlap {
+    margin-top: -25vh;
+    padding-top: 28vh;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, 0.35) 12%,
+            rgba(18, 18, 18, 0.75) 22%,
+            rgba(18, 18, 18, 1) 34%
+        );
+}
+
+/* =========================
+   OPTIONAL STORY IMAGE SECTION
+========================= */
+.story-image-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 6vw;
+    background: #121212;
+}
+
+.story-image-section__content {
+    width: min(100%, 1400px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.story-image-section__text h2 {
+    font-size: clamp(2rem, 4.5vw, 4.5rem);
+    line-height: 1.08;
+    margin-bottom: 1.25rem;
+}
+
+.story-image-section__visual {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #1a1a1a;
+}
+
+.story-image-section__visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   SPACING HELPERS
+========================= */
+.section-shell {
+    width: min(90%, 1400px);
+    margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1100px) {
+    .story-image-section__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    #contains-links {
+        display: none;
+    }
+
+    header {
+        min-height: 190vh;
+    }
+
+    .whitish-box {
+        width: 55vw;
+        height: 38vw;
+        min-width: 220px;
+        min-height: 150px;
+        border-radius: 22px;
+    }
+
+    .story-panel {
+        padding: 8rem 1.5rem;
+    }
+
+    .story-panel--overlap {
+        margin-top: -15vh;
+        padding-top: 20vh;
+    }
+
+    .story-image-section {
+        padding: 6rem 1.5rem;
+    }
+
+    .story-text h1 {
+        font-size: clamp(2.2rem, 11vw, 4.5rem);
+    }
 }
