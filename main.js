@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 /* =========================
-   LENIS SETUP
+   LENIS SETUP (FIXED)
 ========================= */
 const lenis = new Lenis({
   duration: 1.15,
@@ -10,6 +10,7 @@ const lenis = new Lenis({
   touchMultiplier: 1.5,
 });
 
+/* Sync Lenis with GSAP */
 lenis.on("scroll", ScrollTrigger.update);
 
 gsap.ticker.add((time) => {
@@ -27,17 +28,9 @@ const heroTl = gsap.timeline({
     start: "top top",
     end: "bottom bottom",
     scrub: 1.2,
-    // markers: true, // uncomment while debugging
   }
 });
 
-/*
-  What happens:
-  - image wrapper grows from small card -> large cinematic frame
-  - image inside scales slightly for a subtle zoom
-  - text fades up and out
-  - scroll indicator fades out
-*/
 heroTl
   .to(".story-hero__image-wrap", {
     width: "80vw",
@@ -63,13 +56,10 @@ heroTl
     ease: "none"
   }, 0.08);
 
+
 /* =========================
    SECTION 2 REVEAL
 ========================= */
-/*
-  Section 2 starts slightly lower and fades in as it comes up
-  This gives the "chapter emerges over the image" effect
-*/
 gsap.from(".story-panel--origin .story-panel__inner", {
   y: 100,
   opacity: 0,
@@ -79,6 +69,73 @@ gsap.from(".story-panel--origin .story-panel__inner", {
     start: "top 80%",
     end: "top 40%",
     scrub: 1,
-    // markers: true,
   }
 });
+
+
+/* =========================
+   STORY FLOW CONTROL (FIXED)
+========================= */
+
+const panels = gsap.utils.toArray(".story-panel");
+const dots = document.querySelectorAll(".story-progress__dots li");
+const progressFill = document.querySelector(".story-progress__fill");
+
+/* Ensure first panel starts active */
+panels.forEach((panel, i) => {
+  panel.classList.remove("is-active", "is-dim");
+
+  if (i === 0) {
+    panel.classList.add("is-active");
+  } else {
+    panel.classList.add("is-dim");
+  }
+});
+
+/* Create triggers */
+panels.forEach((panel, i) => {
+
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top 55%",
+    end: "bottom 45%",
+
+    onEnter: () => activatePanel(i),
+    onEnterBack: () => activatePanel(i),
+  });
+
+});
+
+
+function activatePanel(index) {
+
+  panels.forEach((p, i) => {
+    p.classList.remove("is-active", "is-dim");
+
+    if (i === index) {
+      p.classList.add("is-active");
+    } else {
+      p.classList.add("is-dim");
+    }
+  });
+
+  /* dots */
+  dots.forEach(d => d.classList.remove("active"));
+  if (dots[index]) dots[index].classList.add("active");
+
+  /* progress bar (safe) */
+  const total = panels.length - 1;
+  const progress = total > 0 ? index / total : 0;
+
+  gsap.to(progressFill, {
+    height: `${progress * 100}%`,
+    duration: 0.35,
+    ease: "power2.out"
+  });
+}
+
+
+/* =========================
+   FINAL FIX
+========================= */
+ScrollTrigger.refresh();

@@ -165,89 +165,9 @@ header {
     width: 100%;
 }
 
-/* sticky stage inside header */
-.story-stage {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* text block over hero */
-.story-text {
-    position: relative;
-    z-index: 3;
-    width: min(90%, 1000px);
-    text-align: center;
-    padding: 0 1rem;
-    will-change: transform, opacity;
-}
-
-.story-text h1 {
-    font-size: clamp(2.8rem, 7vw, 7rem);
-    line-height: 1.02;
-    margin-bottom: 1.5rem;
-}
-
-.story-text .story-copy {
-    margin: 0 auto;
-}
-
 /* optional helper if you still want slight spacing */
 .push-down-slight {
     padding-top: 0;
-}
-
-/* =========================
-   HERO IMAGE BOX
-========================= */
-.whitish-box {
-    position: absolute;
-    z-index: 1;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    width: 28vw;
-    height: 18vw;
-
-    min-width: 280px;
-    min-height: 180px;
-
-    max-width: 520px;
-    max-height: 340px;
-
-    border-radius: 30px;
-    overflow: hidden;
-    box-sizing: border-box;
-
-    background-color: transparent;
-    background-image: url(./assets/dianacibotari1991-woman-6133583_1920.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    will-change: width, height, border-radius, transform;
-}
-
-/* dark overlay on image for readability */
-.whitish-box::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.28);
-    z-index: 1;
-}
-
-/* if you place content inside the box later */
-.whitish-box > * {
-    position: relative;
-    z-index: 2;
 }
 
 /* =========================
@@ -337,6 +257,88 @@ header {
     margin: 0 auto;
 }
 
+/* ========================= STORY PROGRESSION ========================= */
+
+.story-panel {
+  transition: filter 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* inactive panels */
+.story-panel.is-dim {
+  filter: blur(6px) brightness(0.5);
+  opacity: 0.4;
+  transform: scale(0.98);
+}
+
+/* active panel */
+.story-panel.is-active {
+  filter: blur(0px) brightness(1);
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ========================= LEFT PROGRESS ========================= */
+
+.story-progress {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.story-progress__track {
+  width: 2px;
+  height: 220px;
+  background: rgba(255,255,255,0.15);
+  position: relative;
+}
+
+.story-progress__fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: #E0E0E0;
+}
+
+.story-progress__dots {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-progress__dots li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+
+.story-progress__dots li.active {
+  background: #fff;
+  transform: scale(1.6);
+}
+
+/* ========================= FOOTER ========================= */
+
+.site-footer {
+  padding: 6rem 0;
+  text-align: center;
+  background: #0e0e0e;
+}
+
+.site-footer .small {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
@@ -380,3 +382,4 @@ header {
         font-size: clamp(2.2rem, 11vw, 4.5rem);
     }
 }
+
