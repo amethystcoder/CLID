@@ -72,6 +72,32 @@ gsap.from(".story-panel--origin .story-panel__inner", {
   }
 });
 
+/* =========================
+   CHANGE SECTION COLOR INVERSION
+========================= */
+const changeSection = document.querySelector(".story-panel--change");
+
+if (changeSection) {
+  ScrollTrigger.create({
+    trigger: changeSection,
+    start: "top 80%",
+    end: "bottom 20%",
+    scrub: true,
+    onUpdate: (self) => {
+      const progress = self.progress;
+
+      gsap.to(document.body, {
+        "--bg-color": gsap.utils.interpolate("#121212", "#f5f5f5", progress),
+        "--text-primary": gsap.utils.interpolate("#E0E0E0", "#111111", progress),
+        "--text-secondary": gsap.utils.interpolate("#B0B0B0", "#444444", progress),
+        "--panel-bg": gsap.utils.interpolate("#121212", "#ffffff", progress),
+        "--nav-text": gsap.utils.interpolate("#B0B0B0", "#333333", progress),
+        duration: 0.1,
+        ease: "none"
+      });
+    }
+  });
+}
 
 /* =========================
    STORY FLOW CONTROL (FIXED)
