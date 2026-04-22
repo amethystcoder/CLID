@@ -214,31 +214,6 @@ header {
     width: min(100%, 900px);
 }
 
-.story-panel__inner.split {
-    display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.image-content {
-    display: flex;
-    justify-content: center;
-}
-
-.image-content img {
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.image-content img:hover {
-    transform: scale(1.02);
-}
-
 .story-panel h2 {
     font-size: clamp(2.2rem, 5vw, 5rem);
     line-height: 1.08;
@@ -441,11 +416,6 @@ header {
 
     header {
         min-height: 190vh;
-    }
-
-    .story-panel__inner.split {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
     .whitish-box {

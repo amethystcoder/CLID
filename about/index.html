@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/lenis@1.3.17/dist/lenis.min.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+  <title>About CLID</title>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div id="contains-nav-bar">
+      <span id="contains-logo">
+        <svg width="50" height="50" viewBox="0 0 74 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 29.5C2.51472 29.5 0.5 31.5147 0.5 34C0.5 36.4853 2.51472 38.5 5 38.5L5 29.5ZM58.182 37.182C59.9393 35.4246 59.9393 32.5754 58.182 30.818L29.5442 2.18019C27.7868 0.422836 24.9376 0.422836 23.1802 2.18019C21.4228 3.93755 21.4228 6.7868 23.1802 8.54416L48.636 34L23.1802 59.4558C21.4228 61.2132 21.4228 64.0624 23.1802 65.8198C24.9376 67.5772 27.7868 67.5772 29.5442 65.8198L58.182 37.182ZM5 34L5 38.5L30 38.5V34V29.5L5 29.5L5 34ZM30 34V38.5L55 38.5V34V29.5L30 29.5V34Z" fill="#E0E0E0"/>
+          <path d="M69 38.5C71.4853 38.5 73.5 36.4853 73.5 34C73.5 31.5147 71.4853 29.5 69 29.5V38.5ZM15.818 30.818C14.0607 32.5754 14.0607 35.4246 15.818 37.182L44.4558 65.8198C46.2132 67.5772 49.0624 67.5772 50.8198 65.8198C52.5772 64.0624 52.5772 61.2132 50.8198 59.4558L25.364 34L50.8198 8.54416C52.5772 6.7868 52.5772 3.93755 50.8198 2.18019C49.0624 0.422836 46.2132 0.422836 44.4558 2.18019L15.818 30.818ZM69 34V29.5L19 29.5V34V38.5L69 38.5V34Z" fill="#E0E0E0"/>
+        </svg>
+        <h1 class="primary">CLID</h1>
+      </span>
+
+      <span id="contains-links">
+        <ul class="links-list">
+          <li class="link-item"><a href="../origins/" class="nav-link-text secondary">Origins</a></li>
+          <li class="link-item"><a href="../" class="nav-link-text secondary">Home</a></li>
+          <li class="link-item"><a href="../get-involved/" class="nav-link-text secondary">Get Involved</a></li>
+          <li class="link-item"><a href="../programs/" class="nav-link-text secondary">Programs</a></li>
+          <li class="link-item"><a href="../contact/" class="nav-link-text secondary">Contact</a></li>
+          <li class="link-item"><a href="../updates/" class="nav-link-text secondary">Updates</a></li>
+        </ul>
+      </span>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="story-panel story-hero">
+      <div class="story-panel__inner">
+        <h2 class="primary">Who We Are</h2>
+        <p class="secondary story-copy">
+          Community Leadership, Inclusion and Development (CLID) is an organization dedicated to advancing human rights, social justice, and inclusive development. We work alongside individuals and communities to ensure that access to opportunity, justice, and dignity is not limited by background or circumstance.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WHY WE EXIST -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Why We Exist</h2>
+        <p class="secondary story-copy">
+          Across many communities, opportunity is shaped by systems that are not equally accessible to everyone. Barriers such as inequality, limited legal awareness, and social exclusion continue to restrict what individuals are able to achieve.
+        </p>
+        <p class="secondary story-copy">
+          CLID exists to challenge those barriers — not by speaking for communities, but by working with them to build the capacity, confidence, and support systems needed to create lasting change.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: VISION & MISSION -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Our Vision & Mission</h2>
+        <h3 class="primary" style="font-size: 1.5rem; margin-bottom: 1rem;">Vision</h3>
+        <p class="secondary story-copy">
+          To build an inclusive society where every individual, regardless of background or status, has equal access to justice, opportunities, and a dignified life through empowered community leadership.
+        </p>
+        <h3 class="primary" style="font-size: 1.5rem; margin: 2rem 0 1rem 0;">Mission</h3>
+        <p class="secondary story-copy">
+          CLID is committed to promoting human rights, social justice, and inclusive development by fostering community leadership, offering legal and social support services, and empowering marginalized populations through education, advocacy, and collaboration.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WHAT WE DO -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">What We Do</h2>
+        <p class="secondary story-copy">
+          Our work focuses on turning principles into practical, measurable impact.
+        </p>
+        <h3 class="primary" style="font-size: 1.5rem; margin: 2rem 0 1rem 0;">Core Areas</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Advocacy & Human Rights</h4>
+            <p class="secondary story-copy">Promoting awareness, protecting rights, and supporting individuals in navigating complex systems.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Legal & Social Support</h4>
+            <p class="secondary story-copy">Providing guidance and assistance to those facing legal or social challenges.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Community Leadership Development</h4>
+            <p class="secondary story-copy">Equipping individuals to lead within their communities and drive sustainable change.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Education & Awareness</h4>
+            <p class="secondary story-copy">Creating opportunities for learning, engagement, and empowerment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: OUR APPROACH -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">How We Work</h2>
+        <p class="secondary story-copy">
+          We believe that meaningful change is not imposed — it is built from within. Our approach prioritizes collaboration, empowerment, and long-term impact.
+        </p>
+        <h3 class="primary" style="font-size: 1.5rem; margin: 2rem 0 1rem 0;">Principles</h3>
+        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Community-led solutions</span> - Empowering local voices and decisions.</li>
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Empowerment over dependency</span> - Building capacity rather than creating reliance.</li>
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Inclusive participation</span> - Ensuring diverse voices are heard and valued.</li>
+          <li><span class="primary" style="font-weight: 500;">Sustainable development</span> - Focusing on long-term, lasting impact.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 6: WHO WE SERVE -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Who We Serve</h2>
+        <p class="secondary story-copy">
+          We work with individuals and communities facing barriers to inclusion, representation, and opportunity.
+        </p>
+        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Marginalized and underserved populations</li>
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Young people seeking direction and opportunity</li>
+          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Individuals facing legal or social exclusion</li>
+          <li><span class="primary" style="font-weight: 500;">•</span> Communities affected by systemic inequality</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 7: LEADERSHIP -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Our Leadership</h2>
+        <p class="secondary story-copy">
+          CLID is guided by a team of professionals and community-driven individuals committed to advancing justice, inclusion, and sustainable development. Their combined expertise and shared vision drive the organization's mission forward.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Barrister Deborah Oluyemisi Collins</h4>
+            <p class="secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500;">Chairman</p>
+            <p class="secondary story-copy">Provides strategic leadership and oversight, ensuring that CLID remains aligned with its mission of promoting justice, inclusion, and community empowerment. With a strong legal background, she plays a key role in guiding advocacy and rights-based initiatives.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Barrister Olu-Ade Olukokun Steven</h4>
+            <p class="secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500;">Trustee</p>
+            <p class="secondary story-copy">Supports the organization's governance and legal direction, contributing to decision-making processes that strengthen CLID's impact and accountability.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Olukokun Morotoluwa Micheille</h4>
+            <p class="secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500;">Trustee</p>
+            <p class="secondary story-copy">Contributes to the organization's development through strategic support and community-focused insight, helping to ensure CLID's initiatives remain relevant and effective.</p>
+          </div>
+          <div>
+            <h4 class="primary" style="font-size: 1.2rem; margin-bottom: 0.5rem;">Collins-Ohia Joshua Olufemi</h4>
+            <p class="secondary" style="font-size: 0.9rem; margin-bottom: 0.5rem; font-weight: 500;">Trustee</p>
+            <p class="secondary story-copy">Supports organizational growth and operational direction, contributing to initiatives that promote inclusion, leadership, and sustainable community development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: WHY IT MATTERS -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Why It Matters</h2>
+        <p class="secondary story-copy">
+          Inequality is not only a lack of resources — it is a lack of access, representation, and opportunity. When individuals are excluded, entire communities are limited.
+        </p>
+        <p class="secondary story-copy">
+          By empowering people with knowledge, support, and leadership capacity, CLID contributes to building a society where inclusion is not conditional — it is standard.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CALL TO ACTION -->
+    <section class="story-panel">
+      <div class="story-panel__inner">
+        <h2 class="primary">Be Part of the Change</h2>
+        <p class="secondary story-copy">
+          Building inclusive communities requires collective effort. Whether you choose to support, collaborate, or get involved, your role contributes to expanding opportunity and strengthening communities.
+        </p>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="../get-involved/" style="text-decoration: none; background: var(--text-primary); color: var(--bg-color); padding: 1rem 2rem; border-radius: 8px; font-weight: 500; transition: opacity 0.2s;">Join Us</a>
+          <a href="#" style="text-decoration: none; border: 1px solid var(--text-primary); color: var(--text-primary); padding: 1rem 2rem; border-radius: 8px; font-weight: 500; transition: opacity 0.2s;">Partner With Us</a>
+          <a href="#" style="text-decoration: none; border: 1px solid var(--text-primary); color: var(--text-primary); padding: 1rem 2rem; border-radius: 8px; font-weight: 500; transition: opacity 0.2s;">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="section-shell">
+        <h3 class="primary">CLID</h3>
+        <p class="secondary">Community Leadership, Inclusion and Development</p>
+        <p class="secondary small">
+          © 2026 CLID. Building inclusive communities through leadership and justice.
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="about.js"></script>
+</body>
+</html>

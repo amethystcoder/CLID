@@ -92,6 +92,8 @@ if (changeSection) {
         "--text-secondary": gsap.utils.interpolate("#B0B0B0", "#444444", progress),
         "--panel-bg": gsap.utils.interpolate("#121212", "#ffffff", progress),
         "--nav-text": gsap.utils.interpolate("#B0B0B0", "#333333", progress),
+        "--dim-brightness": gsap.utils.interpolate(0.5, 1.2, progress),
+        "--dim-opacity": gsap.utils.interpolate(0.4, 0.6, progress),
         duration: 0.1,
         ease: "none"
       });
@@ -132,6 +134,13 @@ panels.forEach((panel, i) => {
 
 });
 
+/* Add snapping */
+ScrollTrigger.create({
+  snap: 1 / (panels.length - 1), // snap to each panel
+  duration: { min: 0.2, max: 0.6 },
+  delay: 0.1,
+  ease: "power2.inOut"
+});
 
 function activatePanel(index) {
 
@@ -158,6 +167,25 @@ function activatePanel(index) {
     duration: 0.35,
     ease: "power2.out"
   });
+
+  /* Text staggering animation */
+  const activePanel = panels[index];
+  const h2 = activePanel.querySelector('h2');
+  const p = activePanel.querySelector('.secondary');
+
+  if (h2) {
+    gsap.fromTo(h2, 
+      { y: 30, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }
+    );
+  }
+
+  if (p) {
+    gsap.fromTo(p, 
+      { y: 50, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.8, delay: 0.1, ease: "power2.out" }
+    );
+  }
 }
 
 

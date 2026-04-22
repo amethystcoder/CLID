@@ -1,13 +1,13 @@
 # What Clid is ->
 
-Community Leadership, Inclusion and Development is a g
+Community Leadership, Inclusion and Development (CLID) is an organization focused on empowering individuals and communities through leadership development, advocacy, and access to legal and social support. We work to ensure that marginalized populations are not only heard, but equipped to lead change within their own communities.
 
 ## What this website does
-
+This platform exists to share the stories, impact, and mission of CLID, while providing a space for individuals, partners, and supporters to engage with our work, access resources, and contribute to building more inclusive communities.
 
 ## How we plan to do this
 
-We plan to use GSAP to tell this story, because it allows the user to flow along with the story we are telling, and make the user see it from our perspective.
+We use immersive storytelling to help visitors experience the realities many communities face, and the role empowerment plays in transforming those realities. Through interactive design and narrative flow, we aim to move beyond information — creating understanding, empathy, and action.
 
 ## The pages we plan to have based on this.
 - The home page
