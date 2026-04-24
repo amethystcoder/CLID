@@ -32,6 +32,11 @@
         <h1 class="primary">CLID</h1>
       </span>
 
+      <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
       <span id="contains-links">
         <ul class="links-list">
           <li class="link-item"><a href="../" class="nav-link-text secondary">Home</a></li>
@@ -42,6 +47,18 @@
           <li class="link-item"><a href="../updates/" class="nav-link-text secondary">Updates</a></li>
         </ul>
       </span>
+    </div>
+
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+    <div class="mobile-nav-panel" id="mobile-nav-panel">
+      <ul class="mobile-links-list">
+        <li class="link-item"><a href="../" class="nav-link-text secondary">Home</a></li>
+        <li class="link-item"><a href="../about/" class="nav-link-text secondary">About</a></li>
+        <li class="link-item"><a href="../origins/" class="nav-link-text secondary">Origins</a></li>
+        <li class="link-item"><a href="../programs/" class="nav-link-text secondary">Programs</a></li>
+        <li class="link-item"><a href="../contact/" class="nav-link-text secondary">Contact</a></li>
+        <li class="link-item"><a href="../updates/" class="nav-link-text secondary">Updates</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -167,5 +184,6 @@
   </main>
 
   <script src="get-involved.js"></script>
+  <script src="../nav.js"></script>
 </body>
 </html>
