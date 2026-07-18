@@ -23,14 +23,6 @@ gsap.ticker.lagSmoothing(0);
 ========================= */
 const panels = gsap.utils.toArray(".story-panel");
 
-/* Add snapping */
-ScrollTrigger.create({
-  snap: 1 / (panels.length - 1), // snap to each section
-  duration: { min: 0.2, max: 0.6 },
-  delay: 0.1,
-  ease: "power2.inOut"
-});
-
 panels.forEach((panel, index) => {
   const h2 = panel.querySelector('h2');
   const paragraphs = panel.querySelectorAll('.secondary, p');

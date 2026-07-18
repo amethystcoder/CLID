@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0.400;0.500;0.700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../insp-animations.css" />
   <title>Contact Us | CLID</title>
 </head>
 <body>
@@ -65,7 +66,9 @@
   </nav>
 
   <main>
-    <section class="story-panel story-hero">
+    <section class="story-panel story-hero insp-decor-host">
+      <span class="insp-decor insp-decor--flower" style="top: 15%; right: 8%; --insp-decor-size: 160px; --insp-decor-rot: -10deg;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--leaf" style="bottom: 18%; left: 6%; --insp-decor-size: 120px; --insp-decor-rot: 14deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">Contact Us</h2>
         <p class="secondary story-copy">
@@ -83,20 +86,22 @@
         <div class="contact-details-grid">
           <div>
             <h3 class="primary">Email</h3>
-            <ul class="simple-list">
-              <li><a href="mailto:barristercoldeb2@gmail.com">barristercoldeb2@gmail.com</a></li>
-              <li><a href="mailto:oluadeadewonujesu@yahoo.com">oluadeadewonujesu@yahoo.com</a></li>
-              <li><a href="mailto:moroolukokun@gmail.com">moroolukokun@gmail.com</a></li>
-              <li><a href="mailto:amethystguitaristj@gmail.com">amethystguitaristj@gmail.com</a></li>
+            <!-- INSP 07 — row list -->
+            <ul class="insp-list" data-reveal="up">
+              <li class="insp-list-item"><a href="mailto:barristercoldeb2@gmail.com">barristercoldeb2@gmail.com</a></li>
+              <li class="insp-list-item"><a href="mailto:oluadeadewonujesu@yahoo.com">oluadeadewonujesu@yahoo.com</a></li>
+              <li class="insp-list-item"><a href="mailto:moroolukokun@gmail.com">moroolukokun@gmail.com</a></li>
+              <li class="insp-list-item"><a href="mailto:amethystguitaristj@gmail.com">amethystguitaristj@gmail.com</a></li>
             </ul>
           </div>
           <div>
             <h3 class="primary">Phone</h3>
-            <ul class="simple-list">
-              <li><a href="tel:+2348037166168">08037166168</a></li>
-              <li><a href="tel:+2348035853622">08035853622</a></li>
-              <li><a href="tel:+2348028297387">08028297387</a></li>
-              <li><a href="tel:+2348027565382">08027565382</a></li>
+            <!-- INSP 07 — row list -->
+            <ul class="insp-list" data-reveal="left">
+              <li class="insp-list-item"><a href="tel:+2348037166168">08037166168</a></li>
+              <li class="insp-list-item"><a href="tel:+2348035853622">08035853622</a></li>
+              <li class="insp-list-item"><a href="tel:+2348028297387">08028297387</a></li>
+              <li class="insp-list-item"><a href="tel:+2348027565382">08027565382</a></li>
             </ul>
           </div>
         </div>
@@ -123,7 +128,7 @@
             <span>Message</span>
             <textarea name="message" rows="6" placeholder="Write your message here" required></textarea>
           </label>
-          <button type="submit" class="cta-button primary">Send Message</button>
+          <button type="submit" class="cta-button primary insp-magnetic">Send Message</button>
         </form>
       </div>
     </section>
@@ -174,7 +179,9 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer insp-decor-host">
+      <span class="insp-decor insp-decor--sparkles" style="top: 20%; left: 7%; --insp-decor-size: 110px; --insp-decor-rot: 0deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--clover" style="top: 22%; right: 8%; --insp-decor-size: 120px; --insp-decor-rot: 10deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="section-shell">
         <h3 class="primary">CLID</h3>
         <p class="secondary">Community Leadership, Inclusion and Development</p>
@@ -187,5 +194,6 @@
 
   <script src="contact.js"></script>
   <script src="../nav.js"></script>
+  <script src="../insp-animations.js"></script>
 </body>
 </html>

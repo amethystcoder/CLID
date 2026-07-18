@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../insp-animations.css" />
   <title>About CLID</title>
 </head>
 <body>
@@ -64,7 +65,9 @@
 
   <main>
     <!-- SECTION 1: HERO -->
-    <section class="story-panel story-hero">
+    <section class="story-panel story-hero insp-decor-host">
+      <span class="insp-decor insp-decor--leaf" style="top: 15%; right: 8%; --insp-decor-size: 160px; --insp-decor-rot: 10deg;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--sparkles" style="bottom: 18%; left: 7%; --insp-decor-size: 110px; --insp-decor-rot: 0deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">Who We Are</h2>
         <p class="secondary story-copy">
@@ -138,11 +141,12 @@
           We believe that meaningful change is not imposed — it is built from within. Our approach prioritizes collaboration, empowerment, and long-term impact.
         </p>
         <h3 class="primary" style="font-size: 1.5rem; margin: 2rem 0 1rem 0;">Principles</h3>
-        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Community-led solutions</span> - Empowering local voices and decisions.</li>
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Empowerment over dependency</span> - Building capacity rather than creating reliance.</li>
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">Inclusive participation</span> - Ensuring diverse voices are heard and valued.</li>
-          <li><span class="primary" style="font-weight: 500;">Sustainable development</span> - Focusing on long-term, lasting impact.</li>
+        <!-- INSP 07 — row list (clip reveal) -->
+        <ul class="insp-list" data-reveal="clip">
+          <li class="insp-list-item"><span><span class="primary" style="font-weight: 500;">Community-led solutions</span> — Empowering local voices and decisions.</span></li>
+          <li class="insp-list-item"><span><span class="primary" style="font-weight: 500;">Empowerment over dependency</span> — Building capacity rather than creating reliance.</span></li>
+          <li class="insp-list-item"><span><span class="primary" style="font-weight: 500;">Inclusive participation</span> — Ensuring diverse voices are heard and valued.</span></li>
+          <li class="insp-list-item"><span><span class="primary" style="font-weight: 500;">Sustainable development</span> — Focusing on long-term, lasting impact.</span></li>
         </ul>
       </div>
     </section>
@@ -154,11 +158,12 @@
         <p class="secondary story-copy">
           We work with individuals and communities facing barriers to inclusion, representation, and opportunity.
         </p>
-        <ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Marginalized and underserved populations</li>
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Young people seeking direction and opportunity</li>
-          <li style="margin-bottom: 1rem;"><span class="primary" style="font-weight: 500;">•</span> Individuals facing legal or social exclusion</li>
-          <li><span class="primary" style="font-weight: 500;">•</span> Communities affected by systemic inequality</li>
+        <!-- INSP 07 — row list -->
+        <ul class="insp-list" data-reveal="up">
+          <li class="insp-list-item">Marginalized and underserved populations</li>
+          <li class="insp-list-item">Young people seeking direction and opportunity</li>
+          <li class="insp-list-item">Individuals facing legal or social exclusion</li>
+          <li class="insp-list-item">Communities affected by systemic inequality</li>
         </ul>
       </div>
     </section>
@@ -196,7 +201,8 @@
     </section>
 
     <!-- SECTION 8: WHY IT MATTERS -->
-    <section class="story-panel">
+    <section class="story-panel insp-decor-host">
+      <span class="insp-decor insp-decor--clover" style="top: 20%; right: 9%; --insp-decor-size: 140px; --insp-decor-rot: -8deg;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">Why It Matters</h2>
         <p class="secondary story-copy">
@@ -205,6 +211,88 @@
         <p class="secondary story-copy">
           By empowering people with knowledge, support, and leadership capacity, CLID contributes to building a society where inclusion is not conditional — it is standard.
         </p>
+      </div>
+    </section>
+
+    <!-- INSP 05 — numbered step list w/ drawing connector line (additive; NOT a .story-panel) -->
+    <section class="insp-steps" aria-label="How we create change">
+      <div class="insp-steps__inner">
+        <p class="insp-steps__eyebrow">Our approach</p>
+        <h2 class="primary insp-steps__heading insp-split">How we create change</h2>
+
+        <div class="insp-steps__list">
+          <div class="insp-steps__line" aria-hidden="true">
+            <div class="insp-steps__line-fill"></div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">01</div>
+            <div class="insp-step__body">
+              <h3 class="primary">Listen</h3>
+              <p class="secondary">We start with the community — understanding real needs, barriers, and priorities rather than assuming them.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">02</div>
+            <div class="insp-step__body">
+              <h3 class="primary">Build</h3>
+              <p class="secondary">We develop local capacity and leadership through training, mentorship, and hands-on engagement.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">03</div>
+            <div class="insp-step__body">
+              <h3 class="primary">Support</h3>
+              <p class="secondary">We provide legal awareness, guidance, and social support so individuals can act on their rights with confidence.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">04</div>
+            <div class="insp-step__body">
+              <h3 class="primary">Sustain</h3>
+              <p class="secondary">We step back as communities lead themselves — keeping change durable, owned, and locally driven.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSP 11 — draggable values carousel (additive; NOT a .story-panel) -->
+    <section class="insp-carousel-section" aria-label="What we stand for">
+      <div class="insp-carousel-section__head">
+        <p class="insp-carousel-section__eyebrow">What we stand for</p>
+        <h2 class="primary insp-carousel-section__heading insp-split">Our values</h2>
+      </div>
+      <div class="insp-carousel" aria-label="Draggable list of values">
+        <div class="insp-carousel__track">
+          <article class="insp-carousel__card">
+            <h3 class="primary">Community</h3>
+            <p class="secondary">Change is built with people, not for them — we start from the priorities communities set for themselves.</p>
+          </article>
+          <article class="insp-carousel__card">
+            <h3 class="primary">Leadership</h3>
+            <p class="secondary">We help local voices step forward, so communities can lead their own progress with confidence.</p>
+          </article>
+          <article class="insp-carousel__card">
+            <h3 class="primary">Inclusion</h3>
+            <p class="secondary">Everyone deserves a seat at the table, regardless of background, status, or circumstance.</p>
+          </article>
+          <article class="insp-carousel__card">
+            <h3 class="primary">Development</h3>
+            <p class="secondary">We invest in capacity and knowledge that outlast any single program or moment.</p>
+          </article>
+          <article class="insp-carousel__card">
+            <h3 class="primary">Justice</h3>
+            <p class="secondary">Access to rights and fair treatment should never depend on who you are or where you begin.</p>
+          </article>
+          <article class="insp-carousel__card">
+            <h3 class="primary">Dignity</h3>
+            <p class="secondary">Every person is seen as more than their struggle — worthy of respect and possibility.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -223,7 +311,9 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer insp-decor-host">
+      <span class="insp-decor insp-decor--flower" style="top: 20%; left: 7%; --insp-decor-size: 120px; --insp-decor-rot: -14deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--plant2" style="top: 22%; right: 8%; --insp-decor-size: 120px; --insp-decor-rot: 6deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="section-shell">
         <h3 class="primary">CLID</h3>
         <p class="secondary">Community Leadership, Inclusion and Development</p>
@@ -236,5 +326,6 @@
 
   <script src="about.js"></script>
   <script src="../nav.js"></script>
+  <script src="../insp-animations.js"></script>
 </body>
 </html>

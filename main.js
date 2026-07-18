@@ -134,14 +134,6 @@ panels.forEach((panel, i) => {
 
 });
 
-/* Add snapping */
-ScrollTrigger.create({
-  snap: 1 / (panels.length - 1), // snap to each panel
-  duration: { min: 0.2, max: 0.6 },
-  delay: 0.1,
-  ease: "power2.inOut"
-});
-
 function activatePanel(index) {
 
   panels.forEach((p, i) => {

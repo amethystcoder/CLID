@@ -1,5 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
+/* =========================
+   LENIS SETUP
+========================= */
 const lenis = new Lenis({
   duration: 1.15,
   smoothWheel: true,
@@ -15,16 +18,18 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
+/* =========================
+   STORY PANEL REVEALS (no snap)
+========================= */
 const panels = gsap.utils.toArray(".story-panel");
 
 panels.forEach((panel) => {
-  const heading = panel.querySelector('h2');
-  // .insp-list rows are revealed by insp-animations.js, so the grid that
-  // holds them is intentionally left out of this reveal.
-  const content = panel.querySelectorAll('.secondary, p, .contact-form, .form-field, .cta-button');
+  const h2 = panel.querySelector("h2");
+  const paragraphs = panel.querySelectorAll(".secondary, p");
 
-  if (heading) {
-    gsap.fromTo(heading,
+  if (h2) {
+    gsap.fromTo(
+      h2,
       { opacity: 0, y: 30 },
       {
         opacity: 1,
@@ -35,14 +40,15 @@ panels.forEach((panel) => {
           trigger: panel,
           start: "top 80%",
           end: "top 60%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       }
     );
   }
 
-  if (content.length > 0) {
-    gsap.fromTo(content,
+  if (paragraphs.length > 0) {
+    gsap.fromTo(
+      paragraphs,
       { opacity: 0, y: 40 },
       {
         opacity: 1,
@@ -55,11 +61,20 @@ panels.forEach((panel) => {
           trigger: panel,
           start: "top 75%",
           end: "top 50%",
-          toggleActions: "play none none reverse"
-        }
+          toggleActions: "play none none reverse",
+        },
       }
     );
   }
 });
+
+/* =========================
+   HERO ANIMATION
+========================= */
+gsap.fromTo(
+  ".story-hero .story-panel__inner",
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, duration: 1.2, ease: "power2.out", delay: 0.3 }
+);
 
 ScrollTrigger.refresh();

@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../insp-animations.css" />
   <title>Get Involved | CLID</title>
 </head>
 <body>
@@ -63,7 +64,9 @@
   </nav>
 
   <main>
-    <section class="story-panel story-hero">
+    <section class="story-panel story-hero insp-decor-host">
+      <span class="insp-decor insp-decor--butterfly" style="top: 16%; right: 8%; --insp-decor-size: 150px; --insp-decor-rot: 8deg;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--plant2" style="bottom: 16%; left: 6%; --insp-decor-size: 120px; --insp-decor-rot: -6deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">Get Involved</h2>
         <p class="secondary story-copy">
@@ -84,29 +87,30 @@
     <section class="story-panel">
       <div class="story-panel__inner">
         <h2 class="primary">Ways to Get Involved</h2>
-        <div class="feature-cards">
-          <article class="feature-card">
+        <!-- INSP 06 — card grid + 3D tilt hover (additive; classes only) -->
+        <div class="feature-cards insp-card-grid">
+          <article class="feature-card insp-tilt-card insp-tilt">
             <h3 class="primary">Volunteer With Us</h3>
             <p class="secondary story-copy">
               Contribute your time and skills to support community initiatives, educational programs, and outreach efforts. Volunteering with CLID is an opportunity to make a direct impact while gaining valuable experience.
             </p>
             <a href="../contact/" class="cta-button primary">Become a Volunteer</a>
           </article>
-          <article class="feature-card">
+          <article class="feature-card insp-tilt-card insp-tilt">
             <h3 class="primary">Partner With Us</h3>
             <p class="secondary story-copy">
               We collaborate with organizations, institutions, and community groups to expand our reach and strengthen our impact. Partnerships allow us to deliver more effective and sustainable solutions.
             </p>
             <a href="../contact/" class="cta-button primary">Become a Partner</a>
           </article>
-          <article class="feature-card">
+          <article class="feature-card insp-tilt-card insp-tilt">
             <h3 class="primary">Support Our Work</h3>
             <p class="secondary story-copy">
               Your support helps us continue providing resources, advocacy, and opportunities to those who need them most. Contributions enable us to expand our programs and reach more communities.
             </p>
             <a href="../contact/" class="cta-button primary">Support CLID</a>
           </article>
-          <article class="feature-card">
+          <article class="feature-card insp-tilt-card insp-tilt">
             <h3 class="primary">Be an Advocate</h3>
             <p class="secondary story-copy">
               Help raise awareness about issues affecting marginalized communities. By sharing knowledge, engaging in conversations, and supporting inclusive initiatives, you contribute to broader social change.
@@ -123,26 +127,29 @@
         <p class="secondary story-copy">
           We welcome individuals and organizations from all backgrounds who are committed to promoting inclusion, justice, and community development.
         </p>
-        <ul class="simple-list">
-          <li>Students and young professionals</li>
-          <li>Community members</li>
-          <li>Organizations and institutions</li>
-          <li>Advocates for social justice</li>
+        <!-- INSP 07 — row list -->
+        <ul class="insp-list" data-reveal="left">
+          <li class="insp-list-item">Students and young professionals</li>
+          <li class="insp-list-item">Community members</li>
+          <li class="insp-list-item">Organizations and institutions</li>
+          <li class="insp-list-item">Advocates for social justice</li>
         </ul>
       </div>
     </section>
 
-    <section class="story-panel">
+    <section class="story-panel insp-decor-host">
+      <span class="insp-decor insp-decor--sparkles" style="top: 20%; right: 9%; --insp-decor-size: 120px; --insp-decor-rot: 0deg;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">What You Gain</h2>
         <p class="secondary story-copy">
           Getting involved with CLID is not only about giving — it is also about growth, connection, and shared purpose.
         </p>
-        <ul class="simple-list">
-          <li>Opportunities to contribute to meaningful change</li>
-          <li>Experience in community-focused initiatives</li>
-          <li>Exposure to real-world social impact work</li>
-          <li>Connection with like-minded individuals</li>
+        <!-- INSP 07 — row list -->
+        <ul class="insp-list" data-reveal="scale">
+          <li class="insp-list-item">Opportunities to contribute to meaningful change</li>
+          <li class="insp-list-item">Experience in community-focused initiatives</li>
+          <li class="insp-list-item">Exposure to real-world social impact work</li>
+          <li class="insp-list-item">Connection with like-minded individuals</li>
         </ul>
       </div>
     </section>
@@ -172,7 +179,9 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer insp-decor-host">
+      <span class="insp-decor insp-decor--flower" style="top: 20%; left: 7%; --insp-decor-size: 120px; --insp-decor-rot: -12deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--spiral" style="top: 22%; right: 8%; --insp-decor-size: 110px; --insp-decor-rot: 8deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="section-shell">
         <h3 class="primary">CLID</h3>
         <p class="secondary">Community Leadership, Inclusion and Development</p>
@@ -185,5 +194,6 @@
 
   <script src="get-involved.js"></script>
   <script src="../nav.js"></script>
+  <script src="../insp-animations.js"></script>
 </body>
 </html>

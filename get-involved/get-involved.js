@@ -17,13 +17,6 @@ gsap.ticker.lagSmoothing(0);
 
 const panels = gsap.utils.toArray(".story-panel");
 
-ScrollTrigger.create({
-  snap: 1 / (panels.length - 1),
-  duration: { min: 0.2, max: 0.6 },
-  delay: 0.1,
-  ease: "power2.inOut"
-});
-
 panels.forEach((panel) => {
   const heading = panel.querySelector('h2');
   const paragraphs = panel.querySelectorAll('.secondary, p');

@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../insp-animations.css" />
   <title>Origins of CLID</title>
 </head>
 <body>
@@ -64,7 +65,9 @@
 
   <main>
     <!-- SECTION 1: HERO -->
-    <section class="story-panel story-hero">
+    <section class="story-panel story-hero insp-decor-host">
+      <span class="insp-decor insp-decor--flower" style="top: 16%; right: 8%; --insp-decor-size: 170px; --insp-decor-rot: -8deg;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--spiral" style="bottom: 18%; left: 6%; --insp-decor-size: 110px; --insp-decor-rot: 6deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="story-panel__inner">
         <h2 class="primary">Where It Began</h2>
         <p class="secondary story-copy">
@@ -172,6 +175,53 @@
       </div>
     </section>
 
+    <!-- INSP — journey step list (additive; NOT a .story-panel) -->
+    <section class="insp-steps insp-decor-host" aria-label="The journey so far">
+      <span class="insp-decor insp-decor--plant" style="top: 12%; right: 7%; --insp-decor-size: 150px; --insp-decor-rot: 6deg; --insp-decor-opacity: 0.09;" aria-hidden="true"></span>
+      <div class="insp-steps__inner">
+        <p class="insp-steps__eyebrow">The journey so far</p>
+        <h2 class="primary insp-steps__heading insp-split">From a moment to a movement</h2>
+
+        <div class="insp-steps__list">
+          <div class="insp-steps__line" aria-hidden="true">
+            <div class="insp-steps__line-fill"></div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">01</div>
+            <div class="insp-step__body">
+              <h3 class="primary">We saw the gap</h3>
+              <p class="secondary">The same patterns kept appearing — limited access, little legal awareness, and systems hard to navigate alone.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">02</div>
+            <div class="insp-step__body">
+              <h3 class="primary">We understood the cause</h3>
+              <p class="secondary">Not a lack of ability or ambition, but a lack of support, representation, and structured pathways forward.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">03</div>
+            <div class="insp-step__body">
+              <h3 class="primary">We built a response</h3>
+              <p class="secondary">CLID was created to make support accessible, inclusive, and rooted in the communities it serves.</p>
+            </div>
+          </div>
+
+          <div class="insp-step">
+            <div class="insp-step__num">04</div>
+            <div class="insp-step__body">
+              <h3 class="primary">We keep growing</h3>
+              <p class="secondary">What began as a response to a problem continues to grow into a platform for empowerment and leadership.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SECTION 8: CLOSING -->
     <section class="story-panel">
       <div class="story-panel__inner">
@@ -188,7 +238,9 @@
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="site-footer insp-decor-host">
+      <span class="insp-decor insp-decor--leaf" style="top: 20%; left: 7%; --insp-decor-size: 120px; --insp-decor-rot: -12deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
+      <span class="insp-decor insp-decor--butterfly" style="top: 22%; right: 8%; --insp-decor-size: 120px; --insp-decor-rot: 10deg; --insp-decor-opacity: 0.08;" aria-hidden="true"></span>
       <div class="section-shell">
         <h3 class="primary">CLID</h3>
         <p class="secondary">Community Leadership, Inclusion and Development</p>
@@ -201,5 +253,6 @@
 
   <script src="origins.js"></script>
   <script src="../nav.js"></script>
+  <script src="../insp-animations.js"></script>
 </body>
 </html>
