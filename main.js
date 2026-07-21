@@ -155,7 +155,7 @@ function activatePanel(index) {
   const progress = total > 0 ? index / total : 0;
 
   gsap.to(progressFill, {
-    height: `${progress * 100}%`,
+    "--progress": progress,
     duration: 0.35,
     ease: "power2.out"
   });
